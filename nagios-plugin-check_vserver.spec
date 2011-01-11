@@ -24,7 +24,7 @@ machine.
 
 %prep
 %setup -qcT
-%{__sed} -e '1s,^#!.*python,#!%{__python},' %{SOURCE0} > %{plugin}
+install -p %{SOURCE0} %{plugin}
 
 %install
 rm -rf $RPM_BUILD_ROOT
